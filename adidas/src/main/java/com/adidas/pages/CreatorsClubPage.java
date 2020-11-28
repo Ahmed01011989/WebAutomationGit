@@ -4,7 +4,7 @@ import com.report.ExtentTestManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CreatorsClub {
+public class CreatorsClubPage {
 
     @FindBy(xpath = "(//a[@class='gl-cta gl-cta--primary'])[1]")
     private WebElement joinForFreeBtn;

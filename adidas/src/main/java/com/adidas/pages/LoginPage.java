@@ -49,11 +49,6 @@ public class LoginPage {
 
 
 
-
-
-
-
-
     public void typeOnEmailField(String userName){
         emailField.sendKeys(userName);
         ExtentTestManager.log("Email credential typed");
