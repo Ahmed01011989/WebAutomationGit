@@ -18,9 +18,10 @@ public class HomePageValidations extends TestBase {
         homePage.typeOnSearchBar(data);
         homePage.clickOnSearchBtn();
 
+
     }
 
-    @Test(dataProviderClass = SearchDataProviders.class, dataProvider = "credentials")
+    @Test(dataProviderClass = SearchDataProviders.class, dataProvider = "credentials",enabled = false)
     public void validateUserBeingAbleLogin(String userName, String password) {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
@@ -32,11 +33,16 @@ public class HomePageValidations extends TestBase {
 
     }
 
-    @Test(enabled = false)
-    public void validateUserBeingAbleLoginWithOtherWebSitesCredentials() {
+    @Test
+    public void validateUserBeingAbleLoginAndSignInUpForFreeButton() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
 
+        homePage.clickOnLogIn();
+        loginPage.clickOnSignUpForFreeBtn();
+        loginPage.typeOnEmailFieldOnSignUpForFreeBtn();
+        loginPage.typeOnPasswordFieldOnSignUpForFreeBtn();
+        loginPage.clickOnCheckBoxFieldOnSignUpForFreeBtn();
     }
 
 

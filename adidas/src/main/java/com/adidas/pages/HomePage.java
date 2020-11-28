@@ -23,9 +23,9 @@ public class HomePage {
 
 
 
-
     public void clickOnLogIn() {
         logInBtn.click();
+        ExtentTestManager.log("Clicked on Log in Button");
     }
 
     public void clickOnCreatorsClubBtn() {
@@ -42,7 +42,6 @@ public class HomePage {
         searchBtn.click();
         ExtentTestManager.log("Search Button Clicked");
     }
-
 
 
 }

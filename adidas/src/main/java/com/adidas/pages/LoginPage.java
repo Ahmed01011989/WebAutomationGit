@@ -1,11 +1,8 @@
 package com.adidas.pages;
 
-import com.adidas.TestBase;
 import com.report.ExtentTestManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
 
 public class LoginPage {
 
@@ -33,6 +30,26 @@ public class LoginPage {
 
     @FindBy(linkText = "yahoo")
     private WebElement yahooLink;
+
+    @FindBy(xpath = "//span[text()='SIGN UP FOR FREE']")
+    private WebElement  signUpForFreeBtn;
+
+    @FindBy(id="registration-email-field")
+    private WebElement  emailFieldSignUpForFree;
+
+    @FindBy(id="registration-password-field")
+    private WebElement  passwordFieldSignUpForFree;
+
+    @FindBy(id="minimalRegistration-registration-ageconfirmation-field")
+    private WebElement checkBoxFieldSignUpForFree;
+
+    @FindBy(linkText = " Register")
+    private WebElement clickOnSignUpForFreeButton;
+
+
+
+
+
 
 
 
@@ -71,6 +88,32 @@ public class LoginPage {
 
     public void  clickYahooBtn(){
         yahooLink.click();
+    }
+
+    public void clickOnSignUpForFreeBtn(){
+        signUpForFreeBtn.click();
+        ExtentTestManager.log("Clicked on  SIGN UP FOR FREE Button");
+    }
+
+    public void typeOnEmailFieldOnSignUpForFreeBtn(){
+        emailFieldSignUpForFree.sendKeys("testEmail@gmail.com");
+        ExtentTestManager.log("Typed on Email Field SIGN UP FOR FREE Button");
+    }
+
+
+    public void typeOnPasswordFieldOnSignUpForFreeBtn(){
+       passwordFieldSignUpForFree.sendKeys("testPassword");
+        ExtentTestManager.log("Typed on Password  Field SIGN UP FOR FREE Button");
+    }
+
+    public void clickOnCheckBoxFieldOnSignUpForFreeBtn(){
+       checkBoxFieldSignUpForFree.click();
+        ExtentTestManager.log("Clicked on Check Box");
+    }
+
+    public void clickOnSignUpForFreeButton(){
+       clickOnSignUpForFreeButton.click();
+        ExtentTestManager.log("Clicked on SIGN UP FOR FREE Button");
     }
 
 
