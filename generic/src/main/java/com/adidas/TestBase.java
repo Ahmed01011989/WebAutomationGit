@@ -1,4 +1,4 @@
-package com.base;
+package com.adidas;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
@@ -127,7 +127,7 @@ public class TestBase {
      */
     public static void sleepFor(int seconds) {
         try {
-            Thread.sleep(seconds * 1000);
+            Thread.sleep(seconds * 100000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
