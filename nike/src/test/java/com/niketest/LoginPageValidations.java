@@ -4,18 +4,15 @@ package com.niketest;
 import com.base.TestBase;
 import com.nike.data.DataProviders;
 import com.nike.pages.HomePage;
-import com.nike.pages.JoinPage;
 import com.nike.pages.LoginPage;
-import com.report.ExtentTestManager;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginPageValidations extends TestBase {
 
 
     @Test(enabled = false)
-    public void validateUserBeingAleToClickOnJoinUsBtn(){
+    public void validateUserBeingAleToClickOnJoinUsBtn() {
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.clickOnSignInButton();
@@ -23,8 +20,9 @@ public class LoginPageValidations extends TestBase {
         loginPage.validateURL();
 
     }
-    @Test(dataProviderClass = DataProviders.class,dataProvider = "credentials",enabled = false)
-    public void validateUserBeingAbleToLogin(String username,String password) {
+
+    @Test(dataProviderClass = DataProviders.class, dataProvider = "credentials")
+    public void validateUserBeingAbleToLogin(String username, String password) {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
 
@@ -33,8 +31,9 @@ public class LoginPageValidations extends TestBase {
         loginPage.typeOnPasswordField(password);
         loginPage.clickOnSignInBtn();
     }
+
     @Test(enabled = false)
-    public void fieldValidationOnLogInPageSofAss(){
+    public void fieldValidationOnLogInPageSofAss() {
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.clickOnSignInButton();

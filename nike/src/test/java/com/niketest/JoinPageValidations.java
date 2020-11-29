@@ -6,9 +6,9 @@ import com.nike.pages.JoinPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-public class JoinPageValidations extends TestBase{
-   @Test(enabled = false)
-    public void validateUserBeingAleToClickOnSearchBtn(){
+public class JoinPageValidations extends TestBase {
+    @Test(enabled = false)
+    public void validateUserBeingAleToClickOnSearchBtn() {
         JoinPage joinPage = PageFactory.initElements(driver, JoinPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.validateJoinUsBtn();
@@ -17,26 +17,29 @@ public class JoinPageValidations extends TestBase{
         joinPage.clickOnJoinUsBtn();
 
     }
+
     @Test(enabled = false)
-    public void validateUserBeingAleToClickOnJoinUsBtn(){
+    public void validateUserBeingAleToClickOnJoinUsBtn() {
         JoinPage joinPage = PageFactory.initElements(driver, JoinPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.validateJoinUsBtn();
         joinPage.clickOnJoinUsBtn();
 
     }
+
     @Test(enabled = false)
-    public void fieldValidationOnJoinUsPage(){
+    public void fieldValidationOnJoinUsPage() {
         JoinPage joinPage = PageFactory.initElements(driver, JoinPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.validateJoinUsBtn();
         joinPage.clickOnJoinUsBtn();
-       joinPage.validateField();
+        joinPage.validateField();
 
 
     }
+
     @Test(enabled = false)
-    public void fieldValidationOnJoinUsPageSofAss(){
+    public void fieldValidationOnJoinUsPageSofAss() {
         JoinPage joinPage = PageFactory.initElements(driver, JoinPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.validateJoinUsBtn();
@@ -44,7 +47,8 @@ public class JoinPageValidations extends TestBase{
         joinPage.validateFieldUsingSoAssert();
 
     }
-    @Test
+
+    @Test(enabled = false)
     public void sendDatafieldJoinUsPage() {
         JoinPage joinPage = PageFactory.initElements(driver, JoinPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -54,7 +58,6 @@ public class JoinPageValidations extends TestBase{
 
 
     }
-
 
 
 }
