@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-import javax.xml.xpath.XPath;
-
 public class ShopMenPage {
 
     @FindBy(xpath = "//button[@aria-label='Close']")
@@ -22,7 +20,7 @@ public class ShopMenPage {
     @FindBy(xpath = "(//div[@class='gl-product-card__details'])[1]")
     private WebElement stanSmithShoes;
 
-    @FindBy(xpath ="")
+    @FindBy(xpath = "")
     private WebElement size;
 
     @FindBy(xpath = "//button[@class='gl-cta gl-cta--primary gl-cta--full-width']")
@@ -30,17 +28,17 @@ public class ShopMenPage {
 
     //input[@name='Men']
 
-    public void closeAddButton(){
+    public void closeAddButton() {
         closeAdd.click();
         ExtentTestManager.log("Add closed");
     }
 
-    public void dropDownGenderBtn(){
+    public void dropDownGenderBtn() {
         gender.click();
         ExtentTestManager.log("Clicked Gender button");
     }
 
-    public void chooseCheckBox(){
+    public void chooseCheckBox() {
         gender.click();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(checkBox.isSelected());
@@ -48,13 +46,13 @@ public class ShopMenPage {
         softAssert.assertAll();
     }
 
-    public void clickStanSmithShoes(){
+    public void clickStanSmithShoes() {
         stanSmithShoes.click();
         Assert.assertTrue(stanSmithShoes.isDisplayed());
         ExtentTestManager.log("Clicked on Stan Smith Shoes");
     }
 
-    public void selectSizeAndAddToBag(){
+    public void selectSizeAndAddToBag() {
 
         size.click();
         ExtentTestManager.log("Clicked on Size");

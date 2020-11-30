@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class HomePageValidations extends TestBase {
 
 
-    @Test(dataProviderClass = SearchDataProviders.class, dataProvider = "searchData", enabled = false)
+    @Test(dataProviderClass = SearchDataProviders.class, dataProvider = "searchData")
     public void validateUserBeingAbleToTypeOnSearchBar(String data) {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.typeOnSearchBar(data);
@@ -33,7 +33,7 @@ public class HomePageValidations extends TestBase {
 
     }
 
-    @Test
+    @Test(groups = "regression")
     public void validateUserBeingAbleLoginAndSignInUpForFreeButton() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
@@ -59,7 +59,7 @@ public class HomePageValidations extends TestBase {
 
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void validateUserBeingAbleToClickShopMenPage() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         ShopMenPage shopMenPage = PageFactory.initElements(driver, ShopMenPage.class);

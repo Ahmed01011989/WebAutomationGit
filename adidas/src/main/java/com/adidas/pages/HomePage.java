@@ -1,13 +1,10 @@
 package com.adidas.pages;
 
 import com.report.ExtentTestManager;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 
 public class HomePage {
-
 
 
     @FindBy(xpath = "//a[text()='Log in']")
@@ -47,7 +44,7 @@ public class HomePage {
     }
 
 
-    public void clickOnShopMen(){
+    public void clickOnShopMen() {
         shopMen.click();
         ExtentTestManager.log("Clicked on Shop Men page");
     }
