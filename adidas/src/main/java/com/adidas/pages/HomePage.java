@@ -4,10 +4,11 @@ import com.report.ExtentTestManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class HomePage {
 
-    private static Logger LOGGER = Logger.getLogger(HomePage.class);
+
 
     @FindBy(xpath = "//a[text()='Log in']")
     private WebElement logInBtn;
@@ -20,6 +21,9 @@ public class HomePage {
 
     @FindBy(xpath = "//input[@name= 'q']")
     private WebElement searchBtn;
+
+    @FindBy(linkText = "SHOP MEN")
+    private WebElement shopMen;
 
 
     public void clickOnLogIn() {
@@ -40,6 +44,12 @@ public class HomePage {
     public void clickOnSearchBtn() {
         searchBtn.click();
         ExtentTestManager.log("Search Button Clicked");
+    }
+
+
+    public void clickOnShopMen(){
+        shopMen.click();
+        ExtentTestManager.log("Clicked on Shop Men page");
     }
 
 
