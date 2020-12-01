@@ -22,7 +22,6 @@ public class HomePage {
     private WebElement searchBtn;
 
 
-
     public void clickOnLogIn() {
         logInBtn.click();
         ExtentTestManager.log("Clicked on Log in Button");
@@ -33,12 +32,12 @@ public class HomePage {
         ExtentTestManager.log("Clicked on Creators Club Button");
     }
 
-    public void typeOnSearchBar(String data){
+    public void typeOnSearchBar(String data) {
         searchBar.sendKeys(data);
-        ExtentTestManager.log("Key typed on Search Bar:"+data);
+        ExtentTestManager.log("Key typed on Search Bar:" + data);
     }
 
-    public void clickOnSearchBtn(){
+    public void clickOnSearchBtn() {
         searchBtn.click();
         ExtentTestManager.log("Search Button Clicked");
     }

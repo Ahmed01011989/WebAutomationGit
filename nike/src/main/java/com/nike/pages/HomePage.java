@@ -1,7 +1,7 @@
 package com.nike.pages;
 
 import com.base.TestBase;
-import com.report.ExtentTestManager;
+import com.extent.ExtentTestManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,13 +29,13 @@ public class HomePage {
 
 
     public void typeOnSearchBar(String data) {
-        LOGGER.info("sending keys : "+data);
+        LOGGER.info("sending keys : " + data);
         searchBar.sendKeys(data);
         ExtentTestManager.log("Type On Search Bar");
 
 
-
     }
+
     public void validateURL() {
         String actualURL = TestBase.driver.getCurrentUrl();
         String expectedURL = "https://www.nike.com/";
@@ -64,11 +64,13 @@ public class HomePage {
         signInBtn.click();
         ExtentTestManager.log("Clicked on Sign In Button");
     }
+
     public void clickOnRealeasButton() {
         realesbtn.click();
         ExtentTestManager.log("Clicked on New Release Button");
 
     }
+
     public void validateJoinUsBtn() {
         joinUsBtn.click();
         ExtentTestManager.log("Clicked on Join Us Button");

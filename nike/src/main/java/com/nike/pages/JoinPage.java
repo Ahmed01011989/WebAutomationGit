@@ -1,7 +1,7 @@
 package com.nike.pages;
 
 import com.base.TestBase;
-import com.report.ExtentTestManager;
+import com.extent.ExtentTestManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -43,15 +43,17 @@ public class JoinPage {
     public void validateURL() {
         String actualURL = TestBase.driver.getCurrentUrl();
         String expectedURL = "https://www.nike.com/membership";
-         Assert.assertTrue(actualURL.contains(expectedURL));
+        Assert.assertTrue(actualURL.contains(expectedURL));
         ExtentTestManager.log("URL has been validated : " + actualURL);
 
     }
-    public void clickOnJoinUsBtn(){
+
+    public void clickOnJoinUsBtn() {
         clickOnJoinUs.click();
         ExtentTestManager.log("Clicked on Join Us Button");
     }
-    public void validateField(){
+
+    public void validateField() {
         Assert.assertTrue(emailaddress.isDisplayed());
         ExtentTestManager.log("email is displayed");
 
@@ -69,31 +71,32 @@ public class JoinPage {
         ExtentTestManager.log("Data Of Birth is displayed");
 
     }
-    public void validateFieldUsingSoAssert(){
+
+    public void validateFieldUsingSoAssert() {
         SoftAssert softAssert = new SoftAssert();
 
         softAssert.assertTrue(emailaddress.isDisplayed());
-        String actualemail=emailaddress.getAttribute("placeholder");
-        String expectedemail="Email address";
-        softAssert.assertEquals(actualemail,expectedemail);
+        String actualemail = emailaddress.getAttribute("placeholder");
+        String expectedemail = "Email address";
+        softAssert.assertEquals(actualemail, expectedemail);
         ExtentTestManager.log("Email Address name is displayed");
 
         softAssert.assertTrue(password.isDisplayed());
-        String actualpassword=password.getAttribute("placeholder");
-        String expectedpassword="Password";
-        softAssert.assertEquals(actualemail,expectedemail);
+        String actualpassword = password.getAttribute("placeholder");
+        String expectedpassword = "Password";
+        softAssert.assertEquals(actualemail, expectedemail);
         ExtentTestManager.log("Password name is displayed");
 
         softAssert.assertTrue(firstname.isDisplayed());
-        String actualfirstname=emailaddress.getAttribute("placeholder");
-        String expectedfirstname="First Name";
-        softAssert.assertEquals(actualemail,expectedemail);
+        String actualfirstname = emailaddress.getAttribute("placeholder");
+        String expectedfirstname = "First Name";
+        softAssert.assertEquals(actualemail, expectedemail);
         ExtentTestManager.log("first name is displayed");
 
 
         String actuallastname = lastname.getAttribute("placeholder");
         String expectedlastname = "Last Name";
-        softAssert.assertEquals(actuallastname,expectedlastname);
+        softAssert.assertEquals(actuallastname, expectedlastname);
         ExtentTestManager.log("last name is displayed");
 
         softAssert.assertTrue(dateofbirth.isDisplayed());
@@ -102,15 +105,15 @@ public class JoinPage {
         softAssert.assertAll();
 
     }
-    public void joinUsField(){
-       emailaddress.sendKeys("test1@gmail.com");
-       password.sendKeys("test1234");
-       firstname.sendKeys("ahmed");
-       lastname.sendKeys("jamal");
-       dateofbirth.sendKeys("01.01.1989");
+
+    public void joinUsField() {
+        emailaddress.sendKeys("test1@gmail.com");
+        password.sendKeys("test1234");
+        firstname.sendKeys("ahmed");
+        lastname.sendKeys("jamal");
+        dateofbirth.sendKeys("01.01.1989");
         ExtentTestManager.log("Clicked on Join Us Button");
     }
-
 
 
 }

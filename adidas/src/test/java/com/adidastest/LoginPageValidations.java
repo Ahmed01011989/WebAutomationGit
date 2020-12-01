@@ -1,6 +1,6 @@
 package com.adidastest;
 
-public class LoginPageValidations{
+public class LoginPageValidations {
 
 
 }
