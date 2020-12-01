@@ -1,12 +1,12 @@
 package com.adidastest;
 
+import com.adidas.TestBase;
 import com.adidas.data.SearchDataProviders;
 import com.adidas.pages.HomePage;
-import com.adidas.TestBase;
+import com.adidas.pages.LoginPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-import com.adidas.pages.LoginPage;
 
 public class HomePageValidations extends TestBase {
 
