@@ -1,6 +1,6 @@
 package com.niketest;
 
-import com.adidas.TestBase;
+import com.base.TestBase;
 import com.nike.data.DataProviders;
 import com.nike.pages.HomePage;
 import org.openqa.selenium.support.PageFactory;
