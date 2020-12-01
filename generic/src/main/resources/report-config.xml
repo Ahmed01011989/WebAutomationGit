@@ -17,7 +17,17 @@
         <documentTitle>Test Automation Report</documentTitle>
 
         <!-- report name - displayed at top-nav -->
+        <
+        <
+        <
+        <
+        <
+        <
+        < HEAD
         <reportName>Best Buy</reportName>
+        =======
+        <reportName>Adidas</reportName>
+        >>>>>>> d3b65c07e0a71e39e9237a41ed65009ff3be22f4
 
         <!-- location of charts in the test view -->
         <!-- top, bottom -->
