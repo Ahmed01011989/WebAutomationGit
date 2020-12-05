@@ -16,20 +16,14 @@
 
     <test name="Automation tests">
 
-        <groups>
-            <run>
-                <include name="smoke"/>
-            </run>
-        </groups>
 
-        <packages>
-            <package name="com.adidastest"></package>
-        </packages>
 
         <classes>
             <class name="com.adidastest.HomePageValidations"/>
             <class name="com.adidastest.LoginPageValidations"/>
             <class name="com.adidastest.CreatorsClubPageValidations"/>
+            <class name="com.adidastest.BagPageValidations"/>
+            <class name="com.adidastest.ExchangesAndReturnsValidations"/>
         </classes>
     </test>
 </suite>

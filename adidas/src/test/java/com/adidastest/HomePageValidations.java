@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class HomePageValidations extends TestBase {
 
 
-    @Test(dataProviderClass = SearchDataProviders.class, dataProvider = "searchData")
+    @Test(dataProviderClass = SearchDataProviders.class, dataProvider = "searchData",enabled = false)
     public void validateUserBeingAbleToTypeOnSearchBar(String data) {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.typeOnSearchBar(data);
@@ -21,7 +21,7 @@ public class HomePageValidations extends TestBase {
 
     }
 
-    @Test(dataProviderClass = SearchDataProviders.class, dataProvider = "credentials")
+    @Test(dataProviderClass = SearchDataProviders.class, dataProvider = "credentials",enabled = false)
     public void validateUserBeingAbleLogin(String userName, String password) {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
@@ -33,7 +33,7 @@ public class HomePageValidations extends TestBase {
 
     }
 
-    @Test(groups = "regression")
+    @Test(enabled = false)
     public void validateUserBeingAbleLoginAndSignInUpForFreeButton() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
@@ -59,7 +59,7 @@ public class HomePageValidations extends TestBase {
 
     }
 
-    @Test(groups = "smoke")
+    @Test(enabled = false)
     public void validateUserBeingAbleToClickShopMenPage() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         ShopMenPage shopMenPage = PageFactory.initElements(driver, ShopMenPage.class);

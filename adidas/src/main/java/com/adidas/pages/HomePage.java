@@ -3,6 +3,7 @@ package com.adidas.pages;
 import com.extent.ExtentTestManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class HomePage {
 
@@ -21,6 +22,12 @@ public class HomePage {
 
     @FindBy(linkText = "SHOP MEN")
     private WebElement shopMen;
+
+    @FindBy(xpath = "//div[@class='header_cart_link___5SXY3 white-header___90riU']")
+    private WebElement bagPage;
+
+    @FindBy(xpath = "//a[text()='Exchanges & Returns']")
+    private WebElement exchangesAndReturns;
 
 
     public void clickOnLogIn() {
@@ -49,6 +56,16 @@ public class HomePage {
         ExtentTestManager.log("Clicked on Shop Men page");
     }
 
+    public void clickOnBagPage(){
+        bagPage.click();
+        ExtentTestManager.log("Clicked on Bag");
+    }
+
+    public void clickExchangesAndReturns(){
+        exchangesAndReturns.click();
+        ExtentTestManager.log("Clicked on Exchanges And Returns Button");
+
+    }
 
 }
 
