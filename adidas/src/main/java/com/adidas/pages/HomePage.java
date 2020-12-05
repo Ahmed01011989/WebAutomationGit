@@ -29,6 +29,9 @@ public class HomePage {
     @FindBy(xpath = "//a[text()='Exchanges & Returns']")
     private WebElement exchangesAndReturns;
 
+    @FindBy(xpath = "(//a[text()='Help'])[1]")
+    private WebElement helpField;
+
 
     public void clickOnLogIn() {
         logInBtn.click();
@@ -64,6 +67,14 @@ public class HomePage {
     public void clickExchangesAndReturns(){
         exchangesAndReturns.click();
         ExtentTestManager.log("Clicked on Exchanges And Returns Button");
+
+    }
+
+    public void validateHelpButton(){
+       helpField.click();
+        ExtentTestManager.log("Clicked on Help page");
+        Assert.assertTrue(helpField.isDisplayed());
+        ExtentTestManager.log("Help page is Displayed");
 
     }
 

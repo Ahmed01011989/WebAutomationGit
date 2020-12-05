@@ -24,6 +24,7 @@
             <class name="com.adidastest.CreatorsClubPageValidations"/>
             <class name="com.adidastest.BagPageValidations"/>
             <class name="com.adidastest.ExchangesAndReturnsValidations"/>
+            <class name="com.adidastest.HelpPageValidations"/>
         </classes>
     </test>
 </suite>

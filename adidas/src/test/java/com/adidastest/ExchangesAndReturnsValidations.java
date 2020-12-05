@@ -17,15 +17,19 @@ public class ExchangesAndReturnsValidations extends TestBase {
         exchangesAndReturns.clickFreeSizeExchange();
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public static void validateUserAbleClickStartYourReturnButton() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         ExchangesAndReturns exchangesAndReturns = PageFactory.initElements(driver, ExchangesAndReturns.class);
         homePage.clickExchangesAndReturns();
         exchangesAndReturns.clickCloseAdBtn();
         exchangesAndReturns.clickStartYourReturnBtn();
-        exchangesAndReturns.validateOrderStatusPageURL();
+        exchangesAndReturns.typeOrderNumber();
+        exchangesAndReturns.typeOnEmailField();
+        exchangesAndReturns.validateFindOrderButton();
     }
+
+
 
 
 
